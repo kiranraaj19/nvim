@@ -10,7 +10,6 @@ return require'packer'.startup(function()
     use 'hrsh7th/cmp-path'  -- path completions
     use 'hrsh7th/cmp-cmdline' -- cmdline comepletions
     use 'saadparwaiz1/cmp_luasnip' -- snippet completions
-    use 'hrsh7th/cmp-nvim-lsp'  -- cmp Helper function to override lsp autocomplete function
     
     -- snippets
     use 'L3MON4D3/LuaSnip' -- snippet engine

@@ -3,7 +3,7 @@ local opts = { noremap=true, silent=true }
 
 -- Setting up Servers
 local lsp_config = require('lspconfig')
-local servers = {'tsserver','pyright','clangd'}
+-- local servers = {'tsserver','pyright','clangd'}
 
 local on_attach = function(client,bufnr)
   -- Enable completion triggered by <c-x><c-o>
@@ -33,16 +33,7 @@ require'cmp'.setup {
     { name = 'nvim_lsp' }
   }
 }
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
--- All server setups
-
-for _,x in ipairs(servers) do
-        lsp_config[x].setup{
-                on_attach = on_attach,
-                capabilities = capabilities
-        }
-end
 
 -- Rust setup
 
